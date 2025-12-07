@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+    height: 100%;
+    font-family: "Inter", Helvetica, sans-serif;
+    background: url(./Imagens/vista-fascinante-oceano-cercado-por-montanhas-rochosas-durante-o-por-sol.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFF;
+    margin: 0;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+header h2{
+    color: #F27405;
+    text-transform: uppercase;
+}
+
+/* MENU */
+nav ul{
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-left: 20px;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #F27405;
+    transition: 0.4s;
+}
+
+/* SEARCH */
+.seach-input{
+    display: flex;
+    gap: 10px;
+}
+
+.seach-input input{
+    border: 1px solid #F27405;
+    padding: 7px 10px;
+    border-radius: 10px;
+    outline: none;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.seach-input input::placeholder{
+    color: #FFF;
+}
+
+.seach-input button{
+    background-color: #F27405;
+    color: #FFF;
+    padding: 7px 15px;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+}
+
+.seach-input button:hover{
+    background-color: #f27405e1;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/* MAIN */
+main{
+    margin-top: 8%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+/* TEXT LEFT */
+.info h1{
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.info h1 span{
+    color: #F27405;
+}
+
+.info p{
+    max-width: 450px;
+    line-height: 1.5;
+}
+
+.info button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #F27405;
+    color: #FFF;
+    border: none;
+    font-weight: bold;
+}
+
+.info button:hover{
+    background-color: #f27405e1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* FORM */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 50px;
+    border-radius: 8px;
+    width: 280px;
+}
+
+form input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: #FFF;
+    border: 1px solid #F27405;
+}
+
+form input::placeholder{
+    color: #FFF;
+}
+
+form button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #F27405;
+    font-weight: bold;
+}
+
+form button:hover{
+    background-color: #F27405;
+    color: #FFF;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+label a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+label a span{
+    color: #F27405;
+}
+
+label a span:hover{
+    color: #f27405d3;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+   =========================== */
+
+@media screen and (max-width: 900px){
+
+    /* Header empilhado */
+    header{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* Search menor */
+    .seach-input{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seach-input input,
+    .seach-input button{
+        width: 70%;
+    }
+
+    /* Main empilhado */
+    main{
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        margin-top: 15%;
+    }
+
+
+    /* Reduz texto */
+    .info h1{
+        font-size: 2.2em;
+    }
+
+    .info p{
+        max-width: 90%;
+        margin: auto;
+    }
+
+    /* Form menor */
+    form{
+        width: 80%;
+        padding: 30px;
+    }
+
+    form input{
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    form button{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .seach-input input,
+    .seach-input button{
+        width: 90%;
+    }
+
+    form{
+        width: 90%;
+    }
+
+    form input{
+        padding: 7px;
+    }
+}
