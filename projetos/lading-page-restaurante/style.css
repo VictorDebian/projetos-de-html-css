@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+}
+
+body{
+    background-color: #f0eae1;
+    height: 100vh;
+}
+
+/* ======================
+   HEADER
+   ====================== */
+header{
+    background-color: #92887f;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header h1{
+    color: #341f12;
+    text-transform: uppercase;
+}
+
+nav a{
+    color: #f3f2f1;
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: #69605b;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+
+nav a button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #69605b;
+    color: #f3f2f1;
+    font-weight: bold;
+}
+
+nav a button:hover{
+    background-color: #f3f2f1;
+    color: #69605b;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+
+/* ======================
+   PAINEL
+   ====================== */
+.painel img{
+    width: 100%;
+    height: 420px;
+    display: flex;
+    object-fit: cover;
+}
+
+.painel p {
+    text-align: center;
+    color: #341f12;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+/* ======================
+   SEÇÃO DO CHEF
+   ====================== */
+section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding: 0 20px;
+}
+
+.descricao-chef {
+    height: 500px;
+    width: 590px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.descricao-chef h2{
+    text-align: center;
+    color: #341f12;
+    text-transform: uppercase;
+}
+
+.descricao-chef p{
+    text-align: center;
+    color: #341f12;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.descricao-chef .btn button{
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #92887fbe;
+}
+
+.descricao-chef .btn button:hover{
+    background-color: #92887f;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+
+/* ======================
+   IMAGENS DO CHEF
+   ====================== */
+.imagens-chef-1 img{
+    height: 500px;
+    width: 350px;
+    object-fit: cover;
+}
+
+.imagens-chef-2 img{
+    height: 500px;
+    width: 350px;
+    object-fit: cover;
+}
+
+
+/* ======================================================
+    RESPONSIVIDADE COMPLETA
+   ====================================================== */
+
+/* ----------- TABLET ----------- */
+@media (max-width: 1024px){
+
+    section{
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .descricao-chef{
+        width: 90%;
+        height: auto;
+    }
+
+    .descricao-chef p{
+        width: 100%;
+    }
+
+    .imagens-chef-1 img,
+    .imagens-chef-2 img{
+        width: 300px;
+        height: auto;
+    }
+}
+
+/* ----------- MOBILE MÉDIO ----------- */
+@media (max-width: 768px){
+
+    /* HEADER */
+    header{
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav a{
+        padding: 8px;
+    }
+
+    /* PAINEL */
+    .painel img{
+        height: 250px;
+    }
+
+    .painel p{
+        padding: 0 20px;
+        font-size: 15px;
+    }
+
+    /* SEÇÃO */
+    section{
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+
+    .descricao-chef{
+        width: 100%;
+        gap: 20px;
+    }
+
+    .descricao-chef h2{
+        font-size: 22px;
+    }
+
+    .descricao-chef p{
+        font-size: 14px;
+    }
+
+    /* Imagens menores */
+    .imagens-chef-1 img,
+    .imagens-chef-2 img{
+        width: 250px;
+        height: auto;
+    }
+
+    .descricao-chef .btn button{
+        padding: 15px;
+        width: 80%;
+        font-size: 14px;
+    }
+}
+
+/* ----------- MOBILE PEQUENO ----------- */
+@media (max-width: 480px){
+
+    header h1{
+        font-size: 22px;
+    }
+
+    nav a{
+        font-size: 14px;
+    }
+
+    .painel img{
+        height: 180px;
+    }
+
+    .descricao-chef h2{
+        font-size: 18px;
+    }
+
+    .descricao-chef p{
+        font-size: 13px;
+    }
+
+    .imagens-chef-1 img,
+    .imagens-chef-2 img{
+        width: 200px;
+    }
+
+    .descricao-chef .btn button{
+        width: 100%;
+        padding: 12px;
+    }
+}
